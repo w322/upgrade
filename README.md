@@ -1,6 +1,6 @@
 # upgrade.sh
 
-A simple script to upgrade a Debian based Linux installtion.
+A simple script to upgrade a Debian based Linux installation.
 
 ## Features
 

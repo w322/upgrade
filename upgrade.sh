@@ -17,7 +17,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 LOG=/home/larry/upgrade.log
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
 
 #limit length of log file
 size=$(stat -c %s $LOG)
@@ -31,5 +31,5 @@ fi
 nice apt-get -qq update || exit 1
 echo "=====" >> $LOG
 date >> $LOG
-nice apt-get -y upgrade &>>$LOG || exit 1
+nice apt-get -qy upgrade &>>$LOG || exit 1
 nice apt-get -q clean || exit 1
